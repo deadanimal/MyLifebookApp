@@ -1,0 +1,7 @@
+{
+  "name": "MyLifebookApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
