@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'MyLifebookApp',
+  appId: 'my.memoir.app',
+  appName: 'MyMemoir',
   webDir: 'dist',
   bundledWebRuntime: false
 };
