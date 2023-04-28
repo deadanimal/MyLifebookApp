@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">MyMemoir</string>
+    <string name="title_activity_main">MyMemoir</string>
+    <string name="package_name">my.memoir.app</string>
+    <string name="custom_url_scheme">my.memoir.app</string>
+</resources>
