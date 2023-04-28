@@ -2,7 +2,7 @@
   <ion-page>
     <ion-header>
       <ion-toolbar>
-        <ion-title>Tab 1</ion-title>
+        <ion-title @click="lol()">Dashboard</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">
@@ -13,11 +13,41 @@
       </ion-header>
 
       <ExploreContainer name="Tab 1 page" />
+
     </ion-content>
   </ion-page>
 </template>
 
-<script setup lang="ts">
+<script>
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
-import ExploreContainer from '@/components/ExploreContainer.vue';
+import { useMemoirStore } from "../stores/memoir";
+//import { ref, onMounted } from 'vue';
+import { ref } from 'vue';
+
+
+
+export default {
+  setup() {
+    const count = ref(0)
+
+    // expose to template and other options API hooks
+    return {
+      count
+    }
+  },
+
+  components: {
+    IonPage, IonHeader, IonToolbar, IonTitle, IonContent
+  },
+
+  mounted() {
+    const store = useMemoirStore();
+    store.createToken();
+    console.log(this.count) // 0
+    setTimeout(()=> {
+      store.lol();
+    }, 5000)
+  }
+}
+
 </script>
