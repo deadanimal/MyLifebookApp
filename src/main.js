@@ -25,6 +25,7 @@ import './theme/variables.css';
 
 import { createPinia } from 'pinia'
 
+document.addEventListener("deviceready", OneSignalInit, false);
 
 const app = createApp(App)
   .use(IonicVue)
